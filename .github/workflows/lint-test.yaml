@@ -52,7 +52,7 @@ jobs:
           ls -1 bazooka/*/Chart.yaml | xargs grep -E "type:\s+library" | sed 's/\/Chart.yaml.*//' > /tmp/_library_charts || /bin/true
           ct list-changed | sed '/^>>>.*/d' > /tmp/_changed_charts
           test_list=$(grep -v -x -f /tmp/_library_charts /tmp/_changed_charts 2>/dev/null || /bin/true)
-          exclude_list=$(cat /tmp/_library_charts | sed '/^ *$/d;N;s/\n/,/' | sed 's/dysnix\///g')
+          exclude_list=$(cat /tmp/_library_charts | sed '/^ *$/d;N;s/\n/,/' | sed 's/bazooka\///g')
 
           if [[ -n "$test_list" ]]; then
             echo "testing=true" >> "$GITHUB_OUTPUT"
