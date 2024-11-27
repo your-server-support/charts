@@ -1,4 +1,4 @@
-[![Lint and Test Charts](https://github.com/your-server-support/charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/dysnix/charts/actions/workflows/lint-test.yaml)
+[![Lint and Test Charts](https://github.com/your-server-support/charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/your-server-support/charts/actions/workflows/lint-test.yaml)
 
 # your-server.support Helm Charts
 
