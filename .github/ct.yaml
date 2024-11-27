@@ -1,0 +1,13 @@
+remote: origin
+target-branch: main
+chart-dirs:
+  - bazooka/
+chart-repos:
+  - dysnix=https://dysnix.github.io/charts
+excluded-charts: []
+debug: true
+check-version-increment: true
+validate-chart-schema: true
+validate-maintainers: true
+validate-yaml: true
+helm-extra-args: --timeout 600s
