@@ -3,7 +3,7 @@ target-branch: main
 chart-dirs:
   - bazooka/
 chart-repos:
-  - dysnix=https://dysnix.github.io/charts
+  - your-server-support=https://your-server-support.github.io/charts
 excluded-charts: []
 debug: true
 check-version-increment: true

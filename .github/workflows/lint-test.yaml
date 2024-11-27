@@ -49,7 +49,7 @@ jobs:
         # 3. create list of charts to test (excluding library charts) - $test_list
         # 4. exclude library charts list, a comma separated list of library charts - $exclude_list
         run: |
-          ls -1 dysnix/*/Chart.yaml | xargs grep -E "type:\s+library" | sed 's/\/Chart.yaml.*//' > /tmp/_library_charts || /bin/true
+          ls -1 bazooka/*/Chart.yaml | xargs grep -E "type:\s+library" | sed 's/\/Chart.yaml.*//' > /tmp/_library_charts || /bin/true
           ct list-changed | sed '/^>>>.*/d' > /tmp/_changed_charts
           test_list=$(grep -v -x -f /tmp/_library_charts /tmp/_changed_charts 2>/dev/null || /bin/true)
           exclude_list=$(cat /tmp/_library_charts | sed '/^ *$/d;N;s/\n/,/' | sed 's/dysnix\///g')
