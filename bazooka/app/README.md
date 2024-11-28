@@ -24,8 +24,8 @@ As of now **[bazooka/app](https://github.com/your-server-support/charts/tree/mai
 ## TL;DR
 
 ```console
-$ helm repo add dysnix https://dysnix.github.io/charts
-$ helm install my-release dysnix/app
+$ helm repo add your-server-support https://your-server-support.github.io/charts
+$ helm install my-release your-server-support/app
 ```
 
 ## Examples
@@ -287,7 +287,7 @@ containers:
 
 ## Source Code
 
-* <https://github.com/dysnix/charts>
+* <https://github.com/your-server-support/charts>
 
 ## Parameters
 
