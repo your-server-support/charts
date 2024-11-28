@@ -44,6 +44,15 @@ Return the proper image name (for the init container volume-permissions image)
   {{- include "common.images.image" (dict "imageRoot" .Values.volumePermissions.image "global" .Values.global) -}}
 {{- end -}}
 
+
+{{/*
+Return the proper image name (for the init container dbMigration image)
+*/}}
+{{- define "app.dbMigration.image" -}}
+  {{- include "common.images.image" (dict "imageRoot" .Values.dbMigration.image "global" .Values.global) -}}
+{{- end -}}
+
+
 {{/*
 Return service ports
 */}}

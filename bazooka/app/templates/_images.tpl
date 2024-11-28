@@ -27,3 +27,24 @@ Return the proper image name
   {{- end -}}
   {{- list $registry (printf "%s%s" $repository $termination) | compact | join "/" -}}
 {{- end -}}
+
+{{/*
+Return the proper image name
+{{ include "common.images.image" ( dict "imageRoot" .Values.path.to.the.image "global" $) }}
+*/}}
+{{- define "migration.images.image" -}}
+  {{- $registry := .imageRoot.registry -}}
+  {{- $repository := .imageRoot.repository -}}
+  {{- $termination := "" -}}
+  {{- if .global -}}
+    {{- if .global.imageRegistry -}}
+      {{- $registry = .global.imageRegistry -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if .imageRoot.digest -}}
+    {{- $termination = printf "@%s" (.imageRoot.digest | toString) -}}
+  {{- else  -}}
+    {{- $termination = printf ":%s" (.Values.image.tag | toString) -}}
+  {{- end -}}
+  {{- list $registry (printf "%s%s" $repository $termination) | compact | join "/" -}}
+{{- end -}}

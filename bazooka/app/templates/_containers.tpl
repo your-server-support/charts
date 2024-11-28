@@ -8,6 +8,7 @@ Usage:
 {{- define "app.resources.container" -}}
 name: {{ .Values.name }}
 image: {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
+
 imagePullPolicy: {{ .Values.image.pullPolicy }}
 {{- if .Values.containerSecurityContext.enabled }}
 securityContext: {{- omit .Values.containerSecurityContext "enabled" | toYaml | nindent 12 }}

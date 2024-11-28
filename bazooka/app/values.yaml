@@ -226,9 +226,9 @@ diagnosticMode:
 ## @param image.debug Enable image debug mode
 ##
 image:
-  registry: ""
-  repository: ""
-  tag: ""
+  registry: "1"
+  repository: "1"
+  tag: "1"
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -246,6 +246,26 @@ image:
   ## Enable debug mode
   ##
   debug: false
+
+
+dbMigration:
+  enabled: true
+  ## @param volumePermissions.command Command to execute in volumePermissions container.
+  ##
+  command: [ ]
+  diagnosticMode:
+    enabled: false
+  ## Bitnami Shell image
+  ## ref: https://hub.docker.com/r/bitnami/bitnami-shell/tags/
+  ## @param volumePermissions.image.registry Bitnami Shell image registry
+  ## @param volumePermissions.image.repository Bitnami Shell image repository
+  ## @param volumePermissions.image.tag Bitnami Shell image tag (immutable tags are recommended)
+  ## @param volumePermissions.image.pullPolicy Bitnami Shell image pull policy
+  ## @param volumePermissions.image.pullSecrets Bitnami Shell image pull secrets
+  ##
+  image:
+    registry: docker.io
+    repository: bitnami/bitnami-shell
 
 ## @param replicaCount Number of replicas to deploy
 ##
@@ -721,7 +741,7 @@ ingress:
 persistence:
   ## @param persistence.enabled Enable persistence using Persistent Volume Claims
   ##
-  enabled: false
+  enabled: true
   ## @param persistence.type Create separate PVC when set to "pvc", or from volumeClaimTemplates if set to "sts"
   ##
   type: pvc
