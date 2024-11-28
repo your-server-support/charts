@@ -8,7 +8,7 @@ This chart provides a generic interface to deploy an application straight away w
 
 The app chart basically generates a generic application based on the provided helm values input. Just specify `app.name` and the `image.repository` and the deployment along with a couple of other resources (ServiceAccount namely) will be deployed straight away. Evidently such an installation might bring insufficient value to an enduser, thus this chart is charged with other resources (PR and add yours into the list :)).
 
-As of now **[dysnix/app](https://github.com/dysnix/charts/tree/main/dysnix/app)** chart ships the following resources:
+As of now **[bazooka/app](https://github.com/your-server-support/charts/tree/main/bazooka/app)** chart ships the following resources:
 
   - Deployment
   - Service
@@ -30,7 +30,7 @@ $ helm install my-release dysnix/app
 
 ## Examples
 
-> **Tip**: For broader usage examples please refer to [dysnix/app/tests](dysnix/app/tests) values and tests.
+> **Tip**: For broader usage examples please refer to [bazooka/app/tests](bazooka/app/tests) values and tests.
 
 ### Full app example
 
