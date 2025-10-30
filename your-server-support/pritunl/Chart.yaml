@@ -5,14 +5,12 @@ name: pritunl
 version: 0.2.5
 home: https://pritunl.com/
 sources:
-  - https://github.com/dysnix/charts
+  - https://github.com/your-server-support/charts
   - https://github.com/pritunl/pritunl
 
 maintainers:
-  - name: dennybaa
-    email: dennybaa@gmail.com
-  - name: vladstarr
-    email: vladstarrr@icloud.com
+  - email: maintainers@your-server.support
+    name: Mainteiners
 
 dependencies:
   - name: common

@@ -5,7 +5,7 @@
 replicas: 1
 
 image:
-  repository: dysnix/pritunl
+  repository: your-server-support/pritunl
   tag: v1.29-r8
   pullPolicy: IfNotPresent
 

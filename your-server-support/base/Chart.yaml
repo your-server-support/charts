@@ -12,13 +12,13 @@ keywords:
   - helper
   - template
   - function
-  - dysnix
+  - your-server-support
 type: library
 sources:
-  - https://github.com/dysnix/charts
+  - https://github.com/your-server-support/charts
 maintainers:
-  - email: services@dysnix.com
-    name: Dysnix
+  - email: maintainers@your-server.support
+    name: Mainteiners
 dependencies:
   - name: common
     repository: https://charts.bitnami.com/bitnami

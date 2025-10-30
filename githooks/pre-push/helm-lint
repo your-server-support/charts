@@ -13,9 +13,9 @@ failed=0
 
 for chart_name in $( cut -d'/' -f1,2 <<< "$files_to_push" | uniq ); do
     # Avoid running 'helm lint|install' when modified dirs are not charts
-    if [[ $chart_name = dysnix/* ]]; then
+    if [[ $chart_name = your-server-support/* ]]; then
         printf '\033[01;33mUpdating dependencies for %s with helm dep update:\n\033[0m' "$chart_name"
-        helm repo update dysnix
+        helm repo update your-server-support
         helm dep update --skip-refresh "$chart_name"
 
         printf '\033[01;33mValidating %s with helm lint:\n\033[0m' "$chart_name"

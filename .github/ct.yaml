@@ -1,7 +1,7 @@
 remote: origin
 target-branch: main
 chart-dirs:
-  - bazooka/
+  - charts/
 chart-repos:
   - your-server-support=https://your-server-support.github.io/charts
 excluded-charts: []

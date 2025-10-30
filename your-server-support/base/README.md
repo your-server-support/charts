@@ -1,15 +1,15 @@
 # Base
 
-[base](https://github.com/dysnix/charts/tree/main/dysnix/base) is a library Helm chart. It aims to provide a value interface for resources generation from dependent charts.
+[base](https://github.com/your-server-support/charts/tree/main/your-server-support/base) is a library Helm chart. It aims to provide a value interface for resources generation from dependent charts.
 
 ## Create a dependant chart
 
-Create a chart from dysnix base:
+Create a chart from your-server-support base:
 
 ```console
 CHART_NAME=mychart
 mkdir -p $CHART_NAME/templates
-( cd $CHART_NAME;  curl -sSO# https://raw.githubusercontent.com/dysnix/charts/main/dysnix/base/values.yaml )
+( cd $CHART_NAME;  curl -sSO# https://raw.githubusercontent.com/your-server-support/charts/main/your-server-support/base/values.yaml )
 
 cat <<EHD > $CHART_NAME/Chart.yaml
 apiVersion: v2
@@ -26,9 +26,9 @@ dependencies:
     version: 1.10.x
   - name: base
     version: 0.3.x
-    repository: https://dysnix.github.io/charts
+    repository: https://your-server-support.github.io/charts
     tags:
-      - dysnix-base
+      - your-server-support-base
 EHD
 
 cat <<EHD > $CHART_NAME/templates/all.yaml
